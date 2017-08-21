@@ -1,36 +1,27 @@
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry } from 'react-native';
+import { Container, Header, Left, Body, Right, Content, Title } from 'native-base';
+import Options from './components/Options'
 
 export default class Main extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Main Component
-        </Text>
-      </View>
+      <Container>
+        <Header>
+          <Left/>
+          <Body>
+            <Title>Convert E-Z</Title>
+          </Body>
+          <Right/>
+        </Header>
+        <Content>
+          <Options />
+        </Content>
+      </Container>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 30,
-    textAlign: 'center',
-    margin: 10,
-  }
-});
 
 AppRegistry.registerComponent('ConvertEZ', () => Main);
