@@ -1,27 +1,56 @@
 
-import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
-import { Container, Header, Left, Body, Right, Content, Title } from 'native-base';
+import React, { Component } from 'react'
+import { AppRegistry } from 'react-native'
+import { StackNavigator, TabNavigator } from 'react-navigation'
+import { Icon } from 'native-base'
 import Options from './components/Options'
+import Convert from './components/Convert'
+
+
+
+const stackNav = StackNavigator({
+  Select: { screen: Options },
+  Convert: { screen: Convert },
+})
+
+const tabNav = TabNavigator({
+          Select: {
+              screen: Options,
+              navigationOptions:{
+
+                  tabBarLabel: 'Select',
+                  tabBarIcon: <Icon name='menu' />
+
+              }
+          },
+          Convert: {
+              screen: Convert,
+              navigationOptions: {
+                tabBarLabel: 'Convert',
+                tabBarIcon: <Icon name='swap' />,
+                style: {
+                  flexDirection: 'row'
+                }
+              }
+          }
+      },
+          {
+          tabBarOptions: {
+            activeTintColor: 'maroon',
+            activeBackgroundColor: 'lightgrey',
+            labelStyle: {
+              fontSize: 13,
+            }
+          },
+})
 
 export default class Main extends Component {
   render() {
     return (
-      <Container>
-        <Header>
-          <Left/>
-          <Body>
-            <Title>Convert E-Z</Title>
-          </Body>
-          <Right/>
-        </Header>
-        <Content>
-          <Options />
-        </Content>
-      </Container>
+      React.createElement(tabNav)
     );
   }
 }
 
 
-AppRegistry.registerComponent('ConvertEZ', () => Main);
+AppRegistry.registerComponent('ConvertEZ', () => Main)

@@ -6,9 +6,10 @@ import {  StyleSheet,
           Image
        } from 'react-native';
 
- const SingleOption = ({option, onSelect=f=>f}) => (
+ const SingleOption = ({option,  onSelect=f=>f}) =>
+      (
       <TouchableHighlight style={styles.button}
-        onPress={() => onSelect(option)}
+        onPress={() => {onSelect(option)}}
         underlayColor='darksalmon'>
         <View style={styles.row}>
           <Image style={styles.icon} source={option.icon} />
