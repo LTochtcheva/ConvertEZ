@@ -22,7 +22,8 @@ import {  StyleSheet,
 
 const styles = StyleSheet.create({
   row: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   text: {
     fontSize: 22,

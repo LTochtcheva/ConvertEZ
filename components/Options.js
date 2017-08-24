@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, ListView, Text } from 'react-native';
 import { Container,
-         Content, Text,
+         Content,
          Header
         } from 'native-base';
 import SingleOption from './SingleOption.js'
@@ -11,8 +11,13 @@ import measurements from '../consts/measurements.js'
 export default class Options extends Component {
   constructor() {
     super()
+    this.ds = new ListView.DataSource({
+      rowHasChanged: (r1, r2) => r1 !== r2
+    })
     this.state = {
-      option: measurements[0]
+      option: measurements[0],
+      measurements,
+      dataSource: this.ds.cloneWithRows(measurements)
     }
     this.selectOption = this.selectOption.bind(this)
   }
@@ -24,17 +29,15 @@ export default class Options extends Component {
   render() {
     return (
       <Container>
-        <Header style={styles.contentHeader}>
-          <Text style={styles.textHeader}>Select Option</Text>
-        </Header>
         <Content>
-          { measurements.map((el, i) => {
-            return (<SingleOption key={i} option={el}
-             onSelect={this.selectOption} />)
-          })
-          }
-
-
+          <ListView style={styles.list}
+            dataSource={this.state.dataSource}
+            renderRow={(option) => (
+              <SingleOption option={option}
+               onSelect={this.selectOption} />)}
+            renderHeader={() => (
+              <Text style={styles.header}>Select Option</Text>)}>
+          </ListView>
         </Content>
       </Container>
     )
@@ -42,12 +45,14 @@ export default class Options extends Component {
 }
 
 const styles = StyleSheet.create({
-  textHeader: {
-    color: 'blue',
-    fontSize: 26
+  header: {
+    color: 'maroon',
+    fontSize: 26,
+    paddingTop: 20,
+    margin: 10
   },
-  contentHeader: {
-    backgroundColor: '#DDD',
-    justifyContent: 'flex-start'
+  list: {
+    paddingTop: 20,
+    backgroundColor: 'ivory'
   }
 })
