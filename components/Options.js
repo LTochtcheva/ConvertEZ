@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import { Container,
          Content, Text,
-         List, ListItem,
          Header
         } from 'native-base';
+import SingleOption from './SingleOption.js'
 
 const measurements = [
   {title: 'Temperature'},
@@ -22,14 +22,7 @@ export default class Options extends Component {
           <Text style={styles.textHeader}>Select Option</Text>
         </Header>
         <Content>
-          <List style={styles.list}>
-            {measurements.map((option) => {
-              return (
-              <ListItem style={styles.item}>
-                <Text style={styles.itemText}>{option.title}</Text>
-              </ListItem>)
-            })}
-          </List>
+          <SingleOption />
         </Content>
       </Container>
             )
