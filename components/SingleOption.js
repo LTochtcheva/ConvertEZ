@@ -5,16 +5,16 @@ import {  StyleSheet,
           TouchableHighlight,
           Image
        } from 'react-native';
-import tempIcon from '../images/temperature.png'
+import measurements from '../consts/measurements.js'
 
  const SingleOption = () => (
       <TouchableHighlight style={styles.button}
         onPress={() => {console.log('clicked')}}
         underlayColor='darksalmon'>
         <View style={styles.row}>
-          <Image style={styles.icon} source={tempIcon} />
+          <Image style={styles.icon} source={measurements[0].icon} />
           <Text style={styles.text}>
-            Temperature
+            {measurements[0].title}
           </Text>
         </View>
       </TouchableHighlight>
