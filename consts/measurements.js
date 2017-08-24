@@ -6,15 +6,25 @@ import speedIcon from '../images/speed.png'
 
 const measurements = [
   {title: 'Temperature',
-   icon: tempIcon},
+   icon: tempIcon,
+   unitsMetric: ['Celsius'],
+   unitsImperial: ['Fahrenheit']},
   {title: 'Length',
-   icon: lengthIcon},
+   icon: lengthIcon,
+   unitsMetric: ['Mm', 'Cm', 'M', 'Km'],
+   unitsImperial: ['In', 'Yd', 'Ft', 'Mile']},
   {title: 'Weight',
-   icon: weightIcon},
+   icon: weightIcon,
+   unitsMetric: ['Mg', 'Gram', 'Kg', 'Ton'],
+   unitsImperial: ['Oz', 'Lb', 'Stone', 'Ton']},
   {title: 'Area',
-   icon: areaIcon},
+   icon: areaIcon,
+   unitsMetric: ['SqCm', 'SqM', 'Ha', 'SqKm'],
+   unitsImperial: ['SqIn', 'SqFt', 'SqYd', 'Acre', 'SqMile']},
   {title: 'Speed',
-   icon: speedIcon}
+   icon: speedIcon,
+   unitsMetric: ['Kilometers/hour'],
+   unitsImperial: ['Miles/hour']}
 ]
 
 export default measurements
