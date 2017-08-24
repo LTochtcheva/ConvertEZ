@@ -26,21 +26,7 @@ export default class Options extends Component {
     console.log('Option selected: ', option.title)
   }
   render() {
-    // return (
-    //   <Container style={styles.list}>
-    //     <Content>
-    //       <ListView
-    //         dataSource={this.state.dataSource}
-    //         renderRow={(option) => (
-    //           <SingleOption option={option}
-    //            onSelect={this.selectOption}
-    //           />)}
-    //         renderHeader={() => (
-    //           <Text style={styles.header}>Select Option</Text>)}>
-    //       </ListView>
-    //     </Content>
-    //   </Container>
-    // )
+
     return (
 
           <ListView style={styles.list}
