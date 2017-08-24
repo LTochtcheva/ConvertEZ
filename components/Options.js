@@ -5,16 +5,22 @@ import { Container,
          Header
         } from 'native-base';
 import SingleOption from './SingleOption.js'
+import measurements from '../consts/measurements.js'
 
-const measurements = [
-  {title: 'Temperature'},
-  {title: 'Length'},
-  {title: 'Weight'},
-  {title: 'Area'},
-  {title: 'Speed'}
-]
 
 export default class Options extends Component {
+  constructor() {
+    super()
+    this.state = {
+      option: measurements[0]
+    }
+    this.selectOption = this.selectOption.bind(this)
+  }
+
+  selectOption(option) {
+    this.setState({option})
+    console.log('Option selected: ', option.title)
+  }
   render() {
     return (
       <Container>
@@ -22,10 +28,16 @@ export default class Options extends Component {
           <Text style={styles.textHeader}>Select Option</Text>
         </Header>
         <Content>
-          <SingleOption />
+          { measurements.map((el, i) => {
+            return (<SingleOption key={i} option={el}
+             onSelect={this.selectOption} />)
+          })
+          }
+
+
         </Content>
       </Container>
-            )
+    )
   }
 }
 
@@ -37,16 +49,5 @@ const styles = StyleSheet.create({
   contentHeader: {
     backgroundColor: '#DDD',
     justifyContent: 'flex-start'
-  },
-  list: {
-
-  },
-  item: {
-    borderColor: 'blue',
-    margin: 15
-  },
-  itemText: {
-    color: 'blue',
-    fontSize: 22
   }
 })

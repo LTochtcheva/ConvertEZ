@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {  StyleSheet,
           View,
           Text,
           TouchableHighlight,
           Image
        } from 'react-native';
-import measurements from '../consts/measurements.js'
 
- const SingleOption = () => (
+ const SingleOption = ({option, onSelect=f=>f}) => (
       <TouchableHighlight style={styles.button}
-        onPress={() => {console.log('clicked')}}
+        onPress={() => onSelect(option)}
         underlayColor='darksalmon'>
         <View style={styles.row}>
-          <Image style={styles.icon} source={measurements[0].icon} />
+          <Image style={styles.icon} source={option.icon} />
           <Text style={styles.text}>
-            {measurements[0].title}
+            {option.title}
           </Text>
         </View>
       </TouchableHighlight>
@@ -39,7 +38,11 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch'
   },
   icon: {
-    margin: 10
+    margin: 10,
+    height: 25,
+    width: 25
+
   }
 })
+
 export default SingleOption;
