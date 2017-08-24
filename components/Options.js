@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { StyleSheet, ListView, Text } from 'react-native';
+import React, { Component } from 'react'
+import { StyleSheet, ListView, Text } from 'react-native'
 import { Container,
          Content
-        } from 'native-base';
+        } from 'native-base'
 import SingleOption from './SingleOption.js'
 import measurements from '../consts/measurements.js'
 
@@ -26,9 +26,23 @@ export default class Options extends Component {
     console.log('Option selected: ', option.title)
   }
   render() {
+    // return (
+    //   <Container style={styles.list}>
+    //     <Content>
+    //       <ListView
+    //         dataSource={this.state.dataSource}
+    //         renderRow={(option) => (
+    //           <SingleOption option={option}
+    //            onSelect={this.selectOption}
+    //           />)}
+    //         renderHeader={() => (
+    //           <Text style={styles.header}>Select Option</Text>)}>
+    //       </ListView>
+    //     </Content>
+    //   </Container>
+    // )
     return (
-      <Container>
-        <Content>
+
           <ListView style={styles.list}
             dataSource={this.state.dataSource}
             renderRow={(option) => (
@@ -38,8 +52,7 @@ export default class Options extends Component {
             renderHeader={() => (
               <Text style={styles.header}>Select Option</Text>)}>
           </ListView>
-        </Content>
-      </Container>
+
     )
   }
 }
@@ -53,7 +66,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   list: {
-    paddingTop: 20,
+    flex: 1,
     backgroundColor: 'ivory'
   }
 })

@@ -1,10 +1,11 @@
-import React from 'react';
+import React from 'react'
 import {  StyleSheet,
           View,
           Text,
           TouchableHighlight,
           Image
-       } from 'react-native';
+       } from 'react-native'
+
 
  const SingleOption = ({option,  onSelect=f=>f}) =>
       (
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 22,
     margin: 5,
-    padding: 10
+    padding: 5
   },
   button: {
     backgroundColor: 'lightsteelblue',
@@ -47,4 +48,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default SingleOption;
+export default SingleOption
