@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import { Container, Content } from 'native-base'
-import Units from './Units.js'
+
+import InputResult from './InputResult.js'
+import From from './From.js'
+import To from './To.js'
 import measurements from '../consts/measurements.js'
 
 export default class Convert extends Component {
@@ -15,16 +18,9 @@ export default class Convert extends Component {
       <Container style={styles.container}>
         <Content>
           <Text style={styles.header}>{`Convert ${option.title}`}</Text>
-          <View>
-            <Text style={styles.fromHeader}>From</Text>
-            <Units units={option.unitsMetric}/>
-            <Units units={option.unitsImperial}/>
-          </View>
-          <View>
-            <Text style={styles.toHeader}>To</Text>
-            <Units units={option.unitsMetric}/>
-            <Units units={option.unitsImperial}/>
-          </View>
+          <From option={option}/>
+          <To option={option}/>
+          <InputResult />
         </Content>
       </Container>      )
   }
@@ -41,17 +37,5 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: 'ivory'
-  },
-  fromHeader: {
-    color: 'blue',
-    fontSize: 22,
-    fontWeight: 'bold',
-    margin: 10
-  },
-  toHeader: {
-    color: 'green',
-    fontSize: 22,
-    fontWeight: 'bold',
-    margin: 10
   }
 })
