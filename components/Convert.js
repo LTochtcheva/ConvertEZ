@@ -16,7 +16,7 @@ export default class Convert extends Component {
 
     return (
       <Container style={styles.container}>
-        <Content>
+        <Content >
           <Text style={styles.header}>{`Convert ${option.title}`}</Text>
           <From option={option}/>
           <To option={option}/>
