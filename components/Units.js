@@ -6,12 +6,19 @@ import { StyleSheet, View, Text } from 'react-native'
 export default class Units extends Component {
   render () {
 
+    // return (
+    //   <View style={styles.row}>
+    //     <Text style={styles.unit}>mg</Text>
+    //     <Text style={styles.unit}>gram</Text>
+    //     <Text style={styles.unit}>kg</Text>
+    //     <Text style={styles.unit}>ton</Text>
+    //   </View>
+
+    //         )
     return (
       <View style={styles.row}>
-        <Text style={styles.unit}>mg</Text>
-        <Text style={styles.unit}>gram</Text>
-        <Text style={styles.unit}>kg</Text>
-        <Text style={styles.unit}>ton</Text>
+        {this.props.units.map((unit, i) => { return (
+          <Text style={styles.unit} key={i}>{unit}</Text>)})}
       </View>
 
             )
@@ -22,7 +29,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     backgroundColor: 'lightsteelblue',
-    marginTop: 30,
+    marginTop: 20,
   },
   unit: {
     fontSize: 20,
