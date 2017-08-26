@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { StyleSheet, ListView, Text } from 'react-native'
-import { Container,
-         Content
-        } from 'native-base'
+
 import SingleOption from './SingleOption.js'
 import measurements from '../consts/measurements.js'
-
 
 export default class Options extends Component {
   constructor() {
@@ -14,16 +11,16 @@ export default class Options extends Component {
       rowHasChanged: (r1, r2) => r1 !== r2
     })
     this.state = {
-      option: measurements[0],
-      measurements,
+      // option: measurements[0],
+      // measurements,
       dataSource: this.ds.cloneWithRows(measurements)
     }
     this.selectOption = this.selectOption.bind(this)
   }
 
   selectOption(option) {
-    this.setState({option})
-    console.log('Option selected: ', option.title)
+    //this.setState({option})
+    this.props.navigation.navigate('Convert', {option})
   }
   render() {
 
@@ -49,7 +46,8 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: 'bold',
     paddingTop: 20,
-    margin: 10
+    margin: 10,
+    alignSelf: 'center'
   },
   list: {
     flex: 1,

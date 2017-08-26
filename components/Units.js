@@ -5,6 +5,7 @@ import { StyleSheet, View, Text } from 'react-native'
 
 export default class Units extends Component {
   render () {
+
     return (
       <View style={styles.row}>
         <Text style={styles.unit}>mg</Text>

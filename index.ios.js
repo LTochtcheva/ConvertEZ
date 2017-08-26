@@ -6,7 +6,7 @@ import { Icon } from 'native-base'
 import Options from './components/Options'
 import Convert from './components/Convert'
 
-
+console.ignoredYellowBox = ['Remote debugger']
 
 const stackNav = StackNavigator({
   Select: { screen: Options },
