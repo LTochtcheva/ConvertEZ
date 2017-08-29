@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
 
 
 export default class Units extends Component {
   render () {
     return (
+
       <View style={styles.row}>
         {this.props.units.map((unit, i) => { return (
-          <Text style={this.props.style} key={i}>{unit}</Text>)})}
+          <TouchableOpacity key={i} onPress={() => {console.log(unit)}}>
+            <Text style={this.props.style} >{unit}</Text>
+          </TouchableOpacity>
+          )}
+        )}
       </View>
+
             )
   }
 }
