@@ -26,6 +26,8 @@ export default class Convert extends Component {
     this.setState({toUnit: unit})
   }
 
+
+
   render () {
 
    const option = this.props.navigation.state.params ?
@@ -49,8 +51,10 @@ export default class Convert extends Component {
           <Text style={{fontSize: 20,
                          color: 'red'}}>{this.state.toUnit}</Text>
 
-          <From option={option} selectUnit={this.selectFromUnit}/>
-          <To option={option} selectUnit={this.selectToUnit}/>
+          <From option={option}
+           selectUnit={this.selectFromUnit}/>
+          <To option={option}
+            selectUnit={this.selectToUnit}/>
           <InputResult />
         </Content>
       </Container>      )
