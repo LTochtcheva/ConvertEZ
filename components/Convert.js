@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text } from 'react-native'
-import { Container, Content } from 'native-base'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { Container, Content, Icon } from 'native-base'
 
 import InputResult from './InputResult.js'
 import From from './From.js'
 import To from './To.js'
+//import select from './'
 import measurements from '../consts/measurements.js'
 
 export default class Convert extends Component {
+  constructor() {
+    super()
+    //this.goBack = this.goBack.bind(this)
+  }
+
+  // goBack() {
+  //   console.log('want to go back')
+  //   this.props.navigation.navigate('Options')
+  // }
   render () {
 
    const option = this.props.navigation.state.params ?
@@ -17,6 +27,14 @@ export default class Convert extends Component {
     return (
       <Container style={styles.container}>
         <Content >
+          <TouchableOpacity
+            style={styles.backRow}
+            onPress={() => {
+              console.log('Navigation: ', this.props.navigation)
+              this.props.navigation.navigate('Select') }}>
+            <Icon  style={styles.icon} name='arrow-back'/>
+            <Text style ={styles.backText}>Back</Text>
+          </TouchableOpacity >
           <Text style={styles.header}>{`Convert ${option.title}`}</Text>
           <From option={option}/>
           <To option={option}/>
@@ -37,5 +55,20 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: 'ivory'
+  },
+  backText: {
+    alignSelf: 'center',
+    fontSize: 16,
+    color: 'blue',
+    padding: 4
+  },
+  backRow: {
+    flexDirection: 'row',
+    marginTop: 30
+  },
+  icon: {
+    color: 'blue',
+    alignSelf: 'center',
+    margin: 5
   }
 })
