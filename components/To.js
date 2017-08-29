@@ -8,8 +8,14 @@ export default class To extends Component {
 
           <View>
             <Text style={styles.header}>To</Text>
-            <Units units={this.props.option.unitsMetric} style={styles.unit}/>
-            <Units units={this.props.option.unitsImperial} style={styles.unit}/>
+            <Units
+              units={this.props.option.unitsMetric}
+              style={styles.unit}
+              onSelect={this.props.selectUnit}/>
+            <Units
+              units={this.props.option.unitsImperial}
+              style={styles.unit}
+              onSelect={this.props.selectUnit}/>
           </View>
                 )
   }

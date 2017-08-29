@@ -9,7 +9,9 @@ export default class Units extends Component {
 
       <View style={styles.row}>
         {this.props.units.map((unit, i) => { return (
-          <TouchableOpacity key={i} onPress={() => {console.log(unit)}}>
+          <TouchableOpacity
+            key={i}
+            onPress={() => {this.props.onSelect(unit)}}>
             <Text style={this.props.style} >{unit}</Text>
           </TouchableOpacity>
           )}

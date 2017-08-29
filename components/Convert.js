@@ -5,19 +5,27 @@ import { Container, Content, Icon } from 'native-base'
 import InputResult from './InputResult.js'
 import From from './From.js'
 import To from './To.js'
-//import select from './'
 import measurements from '../consts/measurements.js'
 
 export default class Convert extends Component {
   constructor() {
     super()
-    //this.goBack = this.goBack.bind(this)
+    this.state = {
+      fromUnit: '',
+      toUnit: ''
+    }
+    this.selectFromUnit = this.selectFromUnit.bind(this)
+    this.selectToUnit = this.selectToUnit.bind(this)
   }
 
-  // goBack() {
-  //   console.log('want to go back')
-  //   this.props.navigation.navigate('Options')
-  // }
+  selectFromUnit(unit) {
+    this.setState({fromUnit: unit})
+  }
+
+  selectToUnit(unit) {
+    this.setState({toUnit: unit})
+  }
+
   render () {
 
    const option = this.props.navigation.state.params ?
@@ -30,14 +38,19 @@ export default class Convert extends Component {
           <TouchableOpacity
             style={styles.backRow}
             onPress={() => {
-              console.log('Navigation: ', this.props.navigation)
               this.props.navigation.navigate('Select') }}>
             <Icon  style={styles.icon} name='arrow-back'/>
             <Text style ={styles.backText}>Back</Text>
           </TouchableOpacity >
           <Text style={styles.header}>{`Convert ${option.title}`}</Text>
-          <From option={option}/>
-          <To option={option}/>
+
+          <Text style={{fontSize: 20,
+                         color: 'red'}}>{this.state.fromUnit}</Text>
+          <Text style={{fontSize: 20,
+                         color: 'red'}}>{this.state.toUnit}</Text>
+
+          <From option={option} selectUnit={this.selectFromUnit}/>
+          <To option={option} selectUnit={this.selectToUnit}/>
           <InputResult />
         </Content>
       </Container>      )
