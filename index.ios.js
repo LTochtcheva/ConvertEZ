@@ -5,6 +5,7 @@ import { StackNavigator, TabNavigator } from 'react-navigation'
 import { Icon } from 'native-base'
 import Options from './components/Options'
 import Convert from './components/Convert'
+import Try from './components/Try'
 
 console.ignoredYellowBox = ['Remote debugger']
 
@@ -32,6 +33,9 @@ const tabNav = TabNavigator({
                   flexDirection: 'row'
                 }
               }
+          },
+          Try: {
+            screen: Try
           }
       },
           {

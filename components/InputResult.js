@@ -1,23 +1,21 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, TextInput, TouchableHighlight } from 'react-native'
-import { Container, Header, Content,Item, Input, Icon } from 'native-base'
+import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native'
+import {  Icon } from 'native-base'
 
 export default class InputResult extends Component {
   render () {
-    return (
+
+return (
 
         <View style={styles.container}>
          <TextInput
           placeholder='Input'
-          style={styles.input} />
-         <TouchableHighlight
-            underlayColor='darksalmon'
-            style={styles.row}
-            onPress={() => {console.log('Pressed')}}>
-
-              <Icon  style={styles.icon} name='arrow-dropright'/>
-
-          </TouchableHighlight >
+          style={styles.input}/>
+         <TouchableOpacity
+          style={styles.button}
+          onPress={() => { alert('You tapped the button!')}}>
+          <Icon name='arrow-forward' style={styles.icon} />
+          </TouchableOpacity>
          <TextInput
           value='Result'
           style={styles.result} />
@@ -57,14 +55,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontSize: 26
   },
-  row: {
-    flexDirection: 'row',
-    marginTop: 30
-  },
   icon: {
     color: 'blue',
     alignSelf: 'center',
-    margin: 5
+    margin: 10
+  },
+  button: {
+    alignSelf: 'center'
   }
-
 })
