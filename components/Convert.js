@@ -27,6 +27,7 @@ export default class Convert extends Component {
   }
 
   selectToUnit(unit) {
+    this.setState({toUnit: ''})
     this.setState({toUnit: unit})
   }
    goBack() {
