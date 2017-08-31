@@ -5,24 +5,18 @@ import {convertTemp,
         convertSpeed} from './convertOption'
 
 export default (text, option, from, to) => {
-  switch(option) {
+  switch (option) {
     case 'Temperature':
-      convertTemp(text, from, to)
-      break
+      return convertTemp(text, from, to)
     case 'Length':
-      convertLength(text, from, to)
-      break
+      return convertLength(text, from, to)
     case 'Weight':
-      convertWeight(text,from,to)
-      break
+      return convertWeight(text,from,to)
     case 'Area':
-      convertArea(text,from,to)
-      break
+      return convertArea(text,from,to)
     case 'Speed':
-      convertSpeed(text,from,to)
-      break
+      return convertSpeed(text,from,to)
     default:
       alert('Something went wrong...')
   }
-  return (Number(text)*2).toString()
 }
