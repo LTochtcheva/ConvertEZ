@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
-
+import { StyleSheet, View } from 'react-native'
+import SingleUnit from './SingleUnit'
 
 
 export default class Units extends Component {
   constructor() {
     super()
-    this.state = {
-      isSelected: false
-    }
+    this.state = {}
   }
 
   render () {
@@ -16,12 +14,12 @@ export default class Units extends Component {
 
       <View style={styles.row}>
         {this.props.units.map((unit, i) => { return (
-          <TouchableOpacity
+          <SingleUnit
             key={i}
             onPress={() => {
-              this.props.onSelect(unit)}}>
-            <Text style={this.state.isSelected ? styles.selectedUnit : this.props.style} >{unit}</Text>
-          </TouchableOpacity>
+              this.props.onSelect(unit)}}
+            unit={unit}
+            style={this.props.style}/>
           )}
         )}
       </View>)
@@ -33,14 +31,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 5,
     margin: 5
-  },
-  selectedUnit: {
-    fontSize: 20,
-    color: 'black',
-    fontWeight: 'bold',
-    margin: 2,
-    padding: 10,
-    borderWidth: 2,
-    backgroundColor: 'blue'
   }
 })
