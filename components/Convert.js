@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { Container, Content, Icon } from 'native-base'
 
 import InputResult from './InputResult.js'
@@ -25,8 +25,10 @@ export default class Convert extends Component {
   selectToUnit(unit) {
     this.setState({toUnit: unit})
   }
-
-
+   goBack() {
+     this.setState({fromUnit: '', toUnit: ''})
+     this.props.navigation.navigate('Select')
+   }
 
   render () {
 
@@ -39,23 +41,28 @@ export default class Convert extends Component {
         <Content >
           <TouchableOpacity
             style={styles.backRow}
-            onPress={() => {
-              this.props.navigation.navigate('Select') }}>
+            onPress={() => {this.goBack()}}>
             <Icon  style={styles.icon} name='arrow-back'/>
             <Text style ={styles.backText}>Back</Text>
           </TouchableOpacity >
           <Text style={styles.header}>{`Convert ${option.title}`}</Text>
 
-          <Text style={{fontSize: 20,
-                         color: 'red'}}>{this.state.fromUnit}</Text>
-          <Text style={{fontSize: 20,
-                         color: 'red'}}>{this.state.toUnit}</Text>
+
+
 
           <From option={option}
            selectUnit={this.selectFromUnit}/>
           <To option={option}
             selectUnit={this.selectToUnit}/>
-          <InputResult />
+          <InputResult
+            fromUnit={this.state.fromUnit}
+            toUnit={this.state.toUnit}/>
+          <View style={styles.units}>
+            <Text style={styles.unitFrom}>{this.state.fromUnit}
+            </Text>
+            <Text style={styles.unitTo}>{this.state.toUnit}
+            </Text>
+          </View>
         </Content>
       </Container>      )
   }
@@ -87,5 +94,20 @@ const styles = StyleSheet.create({
     color: 'blue',
     alignSelf: 'center',
     margin: 5
+  },
+  units: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
+  unitFrom: {
+    fontSize: 18,
+    color: 'blue',
+    margin: 10
+  },
+  unitTo: {
+    fontSize: 18,
+    color: 'green',
+    margin: 10
   }
 })

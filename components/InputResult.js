@@ -8,17 +8,19 @@ export default class InputResult extends Component {
 return (
 
         <View style={styles.container}>
-         <TextInput
-          placeholder='Input'
-          style={styles.input}/>
-         <TouchableOpacity
-          style={styles.button}
-          onPress={() => { alert('You tapped the button!')}}>
-          <Icon name='arrow-forward' style={styles.icon} />
+          <TextInput
+            placeholder='Input'
+            style={styles.input}/>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => { alert('You tapped the button!')}}>
+            <Icon name='arrow-forward' style={styles.icon} />
           </TouchableOpacity>
-         <TextInput
-          value='Result'
-          style={styles.result} />
+
+          <TextInput
+            value='Result'
+            style={styles.result} />
         </View>
                 )
 
