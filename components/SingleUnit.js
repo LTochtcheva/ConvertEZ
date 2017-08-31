@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
 
-
-
-export default class Units extends Component {
+export default class SingleUnit extends Component {
   constructor() {
     super()
     this.state = {
@@ -14,17 +12,11 @@ export default class Units extends Component {
   render () {
     return (
 
-      <View style={styles.row}>
-        {this.props.units.map((unit, i) => { return (
           <TouchableOpacity
-            key={i}
-            onPress={() => {
-              this.props.onSelect(unit)}}>
-            <Text style={this.state.isSelected ? styles.selectedUnit : this.props.style} >{unit}</Text>
+            onPress={() => { alert('You tapped the button!')}}>
+            <Text style={this.state.isSelected ? styles.selectedUnit : this.props.style} >{this.props.unit}</Text>
           </TouchableOpacity>
-          )}
-        )}
-      </View>)
+    )
   }
 }
 

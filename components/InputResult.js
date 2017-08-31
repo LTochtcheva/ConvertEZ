@@ -5,7 +5,7 @@ import {  Icon } from 'native-base'
 export default class InputResult extends Component {
   render () {
 
-return (
+    return (
 
         <View style={styles.container}>
           <TextInput

@@ -3,6 +3,18 @@ import { StyleSheet, Text, View } from 'react-native'
 import Units from './Units.js'
 
 export default class From extends Component {
+  constructor() {
+    super()
+    this.state = {
+
+    }
+  }
+
+  selectUnit() {
+    this.setState({isSelected: true})
+
+  }
+
   render () {
     return (
 
@@ -35,5 +47,14 @@ const styles = StyleSheet.create({
     padding: 10,
     borderWidth: 2,
     backgroundColor: 'lightsteelblue'
+  },
+  selectedUnit: {
+    fontSize: 20,
+    color: 'black',
+    fontWeight: 'bold',
+    margin: 2,
+    padding: 10,
+    borderWidth: 2,
+    backgroundColor: 'blue'
   }
 })

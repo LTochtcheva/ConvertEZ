@@ -5,7 +5,6 @@ import { StackNavigator, TabNavigator } from 'react-navigation'
 import { Icon } from 'native-base'
 import Options from './components/Options'
 import Convert from './components/Convert'
-import Try from './components/Try'
 
 console.ignoredYellowBox = ['Remote debugger']
 
@@ -20,7 +19,7 @@ const tabNav = TabNavigator({
               navigationOptions:{
 
                   tabBarLabel: 'Select',
-                  tabBarIcon: <Icon name='menu' />
+                  tabBarIcon: <Icon name='menu'/>
 
               }
           },
@@ -33,9 +32,6 @@ const tabNav = TabNavigator({
                   flexDirection: 'row'
                 }
               }
-          },
-          Try: {
-            screen: Try
           }
       },
           {

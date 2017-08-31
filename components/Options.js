@@ -11,27 +11,29 @@ export default class Options extends Component {
       rowHasChanged: (r1, r2) => r1 !== r2
     })
     this.state = {
-      // option: measurements[0],
-      // measurements,
       dataSource: this.ds.cloneWithRows(measurements)
     }
     this.selectOption = this.selectOption.bind(this)
   }
 
   selectOption(option) {
-    //this.setState({option})
-    this.props.navigation.navigate('Convert', {option})
+    this.props.navigation.navigate('Convert', {option, fromUnit:''})
   }
+
+  renderOption(option) {
+    return (
+      <SingleOption option={option}
+        onSelect={this.selectOption}/>
+    )
+  }
+
   render() {
 
     return (
 
           <ListView style={styles.list}
             dataSource={this.state.dataSource}
-            renderRow={(option) => (
-              <SingleOption option={option}
-               onSelect={this.selectOption}
-              />)}
+            renderRow={(option) => this.renderOption(option)}
             renderHeader={() => (
               <Text style={styles.header}>Select Option</Text>)}>
           </ListView>

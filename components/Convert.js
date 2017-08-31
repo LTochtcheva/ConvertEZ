@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet,
+         Text,
+         TouchableOpacity,
+         View } from 'react-native'
 import { Container, Content, Icon } from 'native-base'
 
 import InputResult from './InputResult.js'
@@ -20,6 +23,7 @@ export default class Convert extends Component {
 
   selectFromUnit(unit) {
     this.setState({fromUnit: unit})
+
   }
 
   selectToUnit(unit) {
