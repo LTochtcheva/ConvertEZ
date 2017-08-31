@@ -19,6 +19,7 @@ export default class Units extends Component {
             onPress={() => {
               this.props.onSelect(unit)}}
             unit={unit}
+            from={this.props.from}
             style={this.props.style}/>
           )}
         )}

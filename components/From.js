@@ -22,10 +22,12 @@ export default class From extends Component {
             <Text style={styles.header}>From</Text>
             <Units
               units={this.props.option.unitsMetric}
+              from={true}
               style={styles.unit}
               onSelect={this.props.selectUnit}/>
             <Units
               units={this.props.option.unitsImperial}
+              from={true}
               style={styles.unit}
               onSelect={this.props.selectUnit}/>
           </View>

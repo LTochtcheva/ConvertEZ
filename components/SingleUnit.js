@@ -13,14 +13,16 @@ export default class SingleUnit extends Component {
     this.setState({isSelected: !this.state.isSelected})
   }
   render () {
+    const unitStyle = !this.state.isSelected ? this.props.style :
+      this.props.from ? styles.selectedFromUnit :
+      styles.selectedToUnit
     return (
-
           <TouchableOpacity
             onPress={() =>
             { this.changeStyle()
               this.props.onPress(this.props.unit)}}>
 
-            <Text style={this.state.isSelected ? styles.selectedUnit : this.props.style} >{this.props.unit}</Text>
+            <Text style={unitStyle} >{this.props.unit}</Text>
           </TouchableOpacity>
     )
   }
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     margin: 5
   },
-  selectedUnit: {
+  selectedFromUnit: {
     fontSize: 20,
     color: 'black',
     fontWeight: 'bold',
@@ -41,6 +43,17 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderStyle: 'dashed',
     borderColor: 'blue',
+    backgroundColor: 'lightsteelblue'
+  },
+  selectedToUnit: {
+    fontSize: 20,
+    color: 'black',
+    fontWeight: 'bold',
+    margin: 2,
+    padding: 15,
+    borderWidth: 4,
+    borderStyle: 'dashed',
+    borderColor: 'green',
     backgroundColor: 'lightsteelblue'
   }
 })
