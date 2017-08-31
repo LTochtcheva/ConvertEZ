@@ -27,7 +27,6 @@ export default class Convert extends Component {
   }
 
   selectToUnit(unit) {
-    this.setState({toUnit: ''})
     this.setState({toUnit: unit})
   }
    goBack() {
@@ -61,7 +60,8 @@ export default class Convert extends Component {
             selectUnit={this.selectToUnit}/>
           <InputResult
             fromUnit={this.state.fromUnit}
-            toUnit={this.state.toUnit}/>
+            toUnit={this.state.toUnit}
+            option={option.title}/>
           <View style={styles.units}>
             <Text style={styles.unitFrom}>{this.state.fromUnit}
             </Text>

@@ -16,7 +16,8 @@ export default class InputResult extends Component {
   }
 
   onConvert(text) {
-    let result = convert(text, this.props.fromUnit, this.props.toUnit)
+    const {fromUnit, toUnit, option} = this.props
+    let result = convert(text, option, fromUnit, toUnit)
     this.setState({result})
   }
 
