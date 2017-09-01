@@ -13,6 +13,7 @@ export default class SingleUnit extends Component {
     this.setState({isSelected: !this.state.isSelected})
   }
   render () {
+    //добавить сюда проверку на this.props.selectedAnother
     const unitStyle = !this.state.isSelected ? this.props.style :
       this.props.from ? styles.selectedFromUnit :
       styles.selectedToUnit

@@ -1,8 +1,8 @@
-import {convertTemp,
-        convertLength,
-        convertWeight,
-        convertArea,
-        convertSpeed} from './convertOption'
+import convertTemp from './temp/convertTemp'
+import convertLength from './length/convertLength'
+import convertWeight from './weight/convertWeight'
+import convertArea from './area/convertArea'
+import convertSpeed from './speed/convertSpeed'
 
 export default (text, option, from, to) => {
   switch (option) {
