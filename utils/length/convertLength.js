@@ -27,10 +27,10 @@ export default (text, from, to) => {
     case 'In':
       return convertIn(text,to)
     case 'Yd':
-      return convertTd(text,to)
+      return convertYd(text,to)
     case 'Ft':
       return convertFt(text,to)
-    case 'Cm':
+    case 'Mile':
       return convertMl(text,to)
     default:
       alert('Select From Unit')
