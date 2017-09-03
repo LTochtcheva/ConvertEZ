@@ -16,7 +16,7 @@ const measurements = [
   {title: 'Weight',
    icon: weightIcon,
    unitsMetric: ['Mg', 'Gram', 'Kg', 'Ton'],
-   unitsImperial: ['Oz', 'Lb', 'Stone', 'Ton']},
+   unitsImperial: ['Oz', 'Lb', 'Stone']},
   {title: 'Area',
    icon: areaIcon,
    unitsMetric: ['SqCm', 'SqM', 'Ha', 'SqKm'],

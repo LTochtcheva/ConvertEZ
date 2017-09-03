@@ -1,7 +1,3 @@
-// title: 'Length',
-//    icon: lengthIcon,
-//    unitsMetric: ['Mm', 'Cm', 'M', 'Km'],
-//    unitsImperial: ['In', 'Yd', 'Ft', 'Mile']
 import convertMm from './convertMm'
 import convertCm from './convertCm'
 import convertM from './convertM'
