@@ -17,7 +17,7 @@ export default (text,to) => {
     case 'Ft':
       return (Number(text) * 0.00328084).toString()
     case 'Mile':
-      alert('Select convert to In, Yd or Ft')
+      return (Number(text) * 0.000001).toString()
     default:
       alert('Select To Unit')
   }
