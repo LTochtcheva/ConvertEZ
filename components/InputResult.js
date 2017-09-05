@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { StyleSheet,
          View,
          TextInput,
-         TouchableOpacity } from 'react-native'
-import {  Icon } from 'native-base'
+         TouchableOpacity,
+         Text} from 'react-native'
+import { Icon } from 'native-base'
 import convert from '../utils/convertMain'
 
 export default class InputResult extends Component {
@@ -11,21 +12,22 @@ export default class InputResult extends Component {
     super()
     this.state = {
       text: '',
-      result: 'Result'
+      result: ''
     }
   }
 
   onConvert(text) {
     const {fromUnit, toUnit, option} = this.props
-    let result = convert(text, option, fromUnit, toUnit)
+    let resultNum = convert(text, option, fromUnit, toUnit)
+    let result = `${text} ${fromUnit} = ${resultNum} ${toUnit}`
     this.setState({result})
   }
 
   render () {
-
+    const {fromUnit, toUnit, option} = this.props
     return (
-
-        <View style={styles.container}>
+      <View>
+        <View style={styles.inputContainer}>
           <TextInput
             keyboardType='numeric'
             placeholder='Input'
@@ -40,11 +42,12 @@ export default class InputResult extends Component {
             onPress={() => this.onConvert(this.state.text)}>
             <Icon name='arrow-forward' style={styles.icon} />
           </TouchableOpacity>
-
-          <TextInput
-            value={this.state.result}
-            style={styles.result} />
         </View>
+
+        <Text style={styles.resultText}>
+          {this.state.result}
+        </Text>
+      </View>
                 )
 
 
@@ -52,11 +55,11 @@ export default class InputResult extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  inputContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 20
+    margin: 10
   },
   input: {
     color: 'blue',
@@ -69,12 +72,8 @@ const styles = StyleSheet.create({
     fontSize: 26,
     alignSelf: 'center'
   },
-  result: {
+  resultText: {
     color: 'green',
-    borderColor: 'green',
-    borderWidth: 2,
-    borderRadius: 10,
-    flex:1,
     margin: 5,
     padding: 5,
     alignSelf: 'center',
@@ -86,6 +85,7 @@ const styles = StyleSheet.create({
     margin: 10
   },
   button: {
-    alignSelf: 'center'
+    alignSelf: 'center',
+    margin: 10
   }
 })
