@@ -96,15 +96,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around'
-  },
-  unitFrom: {
-    fontSize: 18,
-    color: 'blue',
-    margin: 10
-  },
-  unitTo: {
-    fontSize: 18,
-    color: 'green',
-    margin: 10
   }
 })

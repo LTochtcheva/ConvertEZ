@@ -10,11 +10,6 @@ export default class From extends Component {
     }
   }
 
-  selectUnit() {
-    this.setState({isSelected: true})
-
-  }
-
   render () {
     return (
 
@@ -23,7 +18,7 @@ export default class From extends Component {
             <Units
               units={this.props.option.unitsMetric}
               from={true}
-              style={styles.unit}
+              //style={styles.unit}
               onSelect={this.props.selectUnit}/>
             <Units
               units={this.props.option.unitsImperial}
@@ -49,14 +44,5 @@ const styles = StyleSheet.create({
     padding: 10,
     borderWidth: 2,
     backgroundColor: 'lightsteelblue'
-  },
-  selectedUnit: {
-    fontSize: 20,
-    color: 'black',
-    fontWeight: 'bold',
-    margin: 2,
-    padding: 10,
-    borderWidth: 2,
-    backgroundColor: 'blue'
   }
 })
