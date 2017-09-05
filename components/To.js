@@ -9,12 +9,7 @@ export default class To extends Component {
           <View>
             <Text style={styles.header}>To</Text>
             <Units
-              units={this.props.option.unitsMetric}
-              from={false}
-              style={styles.unit}
-              onSelect={this.props.selectUnit}/>
-            <Units
-              units={this.props.option.unitsImperial}
+              units={this.props.option.units}
               from={false}
               style={styles.unit}
               onSelect={this.props.selectUnit}/>

@@ -16,14 +16,8 @@ export default class From extends Component {
           <View>
             <Text style={styles.header}>From</Text>
             <Units
-              units={this.props.option.unitsMetric}
+              units={this.props.option.units}
               from={true}
-              //style={styles.unit}
-              onSelect={this.props.selectUnit}/>
-            <Units
-              units={this.props.option.unitsImperial}
-              from={true}
-              style={styles.unit}
               onSelect={this.props.selectUnit}/>
           </View>
                 )
@@ -36,13 +30,5 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     margin: 10
-  },
-  unit: {
-    fontSize: 18,
-    color: 'blue',
-    margin: 2,
-    padding: 10,
-    borderWidth: 2,
-    backgroundColor: 'lightsteelblue'
   }
 })

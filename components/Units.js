@@ -13,6 +13,30 @@ export default class Units extends Component {
   selectUnit (unit) {
     this.setState({unit})
   }
+  getStyle(unit) {
+    if (this.props.from) return this.getFromStyle(unit)
+    else return this.getToStyle(unit)
+  }
+  getFromStyle(unit) {
+    let unitStyle
+    if (this.state.unit === unit) {
+            unitStyle = styles.selectedFromUnit
+          }
+          else {
+            unitStyle = styles.fromUnit
+          }
+    return unitStyle
+  }
+  getToStyle(unit) {
+    let unitStyle
+    if (this.state.unit === unit) {
+            unitStyle = styles.selectedToUnit
+          }
+          else {
+            unitStyle = styles.toUnit
+          }
+    return unitStyle
+  }
   render () {
     let unitStyle
 
@@ -20,12 +44,7 @@ export default class Units extends Component {
 
       <View style={styles.row}>
         {this.props.units.map((unit, i) => {
-          if (this.state.unit === unit) {
-            unitStyle = styles.selectedUnit
-          }
-          else {
-            unitStyle = styles.unit
-          }
+          unitStyle = this.getStyle(unit)
           return (
           <SingleUnit
             key={i}
@@ -45,23 +64,41 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     marginTop: 5,
-    margin: 5
+    margin: 5,
+    alignItems: 'center'
   },
-  unit: {
-    fontSize: 18,
+  fromUnit: {
+    fontSize: 16,
     color: 'blue',
-    margin: 2,
-    padding: 10,
+    margin: 0,
+    padding: 5,
     borderWidth: 2,
     backgroundColor: 'lightsteelblue'
   },
-  selectedUnit: {
-    fontSize: 20,
+  selectedFromUnit: {
+    fontSize: 18,
     color: 'black',
     fontWeight: 'bold',
-    margin: 2,
+    margin: 3,
     padding: 10,
     borderWidth: 2,
     backgroundColor: 'blue'
+  },
+  toUnit: {
+    fontSize: 16,
+    color: 'green',
+    margin: 0,
+    padding: 5,
+    borderWidth: 2,
+    backgroundColor: 'lightsteelblue'
+  },
+  selectedToUnit: {
+    fontSize: 18,
+    color: 'black',
+    fontWeight: 'bold',
+    margin: 3,
+    padding: 10,
+    borderWidth: 2,
+    backgroundColor: 'green'
   }
 })
