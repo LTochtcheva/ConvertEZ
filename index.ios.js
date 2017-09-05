@@ -11,43 +11,53 @@ console.ignoredYellowBox = ['Remote debugger']
 const stackNav = StackNavigator({
   Select: { screen: Options },
   Convert: { screen: Convert },
-})
+},
+{headerMode: 'none'})
 
-const tabNav = TabNavigator({
-          Select: {
-              screen: Options,
-              navigationOptions:{
+// const tabNav = TabNavigator({
+//           Select: {
+//               screen: Options,
+//               navigationOptions:{
 
-                  tabBarLabel: 'Select',
-                  tabBarIcon: <Icon name='menu'/>
+//                   tabBarLabel: 'Select',
+//                   tabBarIcon: <Icon name='menu'/>
 
-              }
-          },
-          Convert: {
-              screen: Convert,
-              navigationOptions: {
-                tabBarLabel: 'Convert',
-                tabBarIcon: <Icon name='swap' />,
-                style: {
-                  flexDirection: 'row'
-                }
-              }
-          }
-      },
-          {
-          tabBarOptions: {
-            activeTintColor: 'maroon',
-            activeBackgroundColor: 'lightgrey',
-            labelStyle: {
-              fontSize: 13,
-            }
-          },
-})
+//               }
+//           },
+//           Convert: {
+//               screen: Convert,
+//               navigationOptions: {
+//                 tabBarLabel: 'Convert',
+//                 tabBarIcon: <Icon name='swap' />,
+//                 style: {
+//                   flexDirection: 'row'
+//                 }
+//               }
+//           }
+//       },
+//           {
+//           tabBarOptions: {
+//             activeTintColor: 'maroon',
+//             activeBackgroundColor: 'lightgrey',
+//             labelStyle: {
+//               fontSize: 13,
+//             }
+//           },
+// })
+// const tabNav = TabNavigator({
+//   Select: {
+//     screen: Options
+//   },
+//   Convert: {
+//     screen: Convert
+//   }
+// })
 
 export default class Main extends Component {
   render() {
     return (
-      React.createElement(tabNav)
+       React.createElement(stackNav)
+
     );
   }
 }
