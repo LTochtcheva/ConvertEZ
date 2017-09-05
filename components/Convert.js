@@ -49,10 +49,8 @@ export default class Convert extends Component {
             <Icon  style={styles.icon} name='arrow-back'/>
             <Text style ={styles.backText}>Back</Text>
           </TouchableOpacity >
+
           <Text style={styles.header}>{`Convert ${option.title}`}</Text>
-
-
-
 
           <From option={option}
            selectUnit={this.selectFromUnit}/>
@@ -78,8 +76,8 @@ const styles = StyleSheet.create({
     color: 'maroon',
     fontSize: 26,
     fontWeight: 'bold',
-    paddingTop: 20,
-    margin: 10,
+  //  paddingTop: 5,
+    margin: 5,
     alignSelf: 'center'
   },
   container: {
