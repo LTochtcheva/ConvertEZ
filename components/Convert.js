@@ -60,12 +60,7 @@ export default class Convert extends Component {
             fromUnit={this.state.fromUnit}
             toUnit={this.state.toUnit}
             option={option.title}/>
-          <View style={styles.units}>
-            <Text style={styles.unitFrom}>{this.state.fromUnit}
-            </Text>
-            <Text style={styles.unitTo}>{this.state.toUnit}
-            </Text>
-          </View>
+
         </Content>
       </Container>      )
   }
@@ -76,7 +71,6 @@ const styles = StyleSheet.create({
     color: 'maroon',
     fontSize: 26,
     fontWeight: 'bold',
-  //  paddingTop: 5,
     margin: 5,
     alignSelf: 'center'
   },
