@@ -3,12 +3,6 @@ import { StyleSheet, Text, View } from 'react-native'
 import Units from './Units.js'
 
 export default class From extends Component {
-  constructor() {
-    super()
-    this.state = {
-
-    }
-  }
 
   render () {
     return (
@@ -20,7 +14,7 @@ export default class From extends Component {
               from={true}
               onSelect={this.props.selectUnit}/>
           </View>
-                )
+    )
   }
 }
 const styles = StyleSheet.create({

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, ScrollView, View } from 'react-native'
 import SingleUnit from './SingleUnit'
 
 
@@ -18,23 +18,11 @@ export default class Units extends Component {
     else return this.getToStyle(unit)
   }
   getFromStyle(unit) {
-    let unitStyle
-    if (this.state.unit === unit) {
-            unitStyle = styles.selectedFromUnit
-          }
-          else {
-            unitStyle = styles.fromUnit
-          }
+    let unitStyle = this.state.unit === unit ? unitStyle = styles.selectedFromUnit : styles.fromUnit
     return unitStyle
   }
   getToStyle(unit) {
-    let unitStyle
-    if (this.state.unit === unit) {
-            unitStyle = styles.selectedToUnit
-          }
-          else {
-            unitStyle = styles.toUnit
-          }
+    let unitStyle = this.state.unit === unit ? unitStyle = styles.selectedToUnit : styles.toUnit
     return unitStyle
   }
   render () {
@@ -42,30 +30,32 @@ export default class Units extends Component {
 
     return (
 
-      <View style={styles.row}>
-        {this.props.units.map((unit, i) => {
-          unitStyle = this.getStyle(unit)
-          return (
-          <SingleUnit
-            key={i}
-            onPress={() => {
-              this.selectUnit(unit)
-              this.props.onSelect(unit)}}
-            unit={unit}
-            from={this.props.from}
-            style={unitStyle}/>
+      <ScrollView  horizontal={true}>
+        <View style={styles.row}>
+          {this.props.units.map((unit, i) => {
+            unitStyle = this.getStyle(unit)
+            return (
+              <SingleUnit
+                key={i}
+                onPress={() => {
+                  this.selectUnit(unit)
+                  this.props.onSelect(unit)}}
+                unit={unit}
+                from={this.props.from}
+                style={unitStyle}/>
+            )}
           )}
-        )}
-      </View>)
+        </View>
+      </ScrollView>)
   }
 }
 
 const styles = StyleSheet.create({
   row: {
+    alignItems: 'center',
     flexDirection: 'row',
     marginTop: 5,
-    margin: 5,
-    alignItems: 'center'
+    margin: 5
   },
   fromUnit: {
     fontSize: 16,
