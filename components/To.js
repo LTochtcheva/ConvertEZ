@@ -5,21 +5,14 @@ import Units from './Units.js'
 export default class To extends Component {
   render () {
     return (
-
           <View>
             <Text style={styles.header}>To</Text>
             <Units
-              units={this.props.option.unitsMetric}
+              units={this.props.option.units}
               from={false}
-              style={styles.unit}
-              onSelect={this.props.selectUnit}/>
-            <Units
-              units={this.props.option.unitsImperial}
-              from={false}
-              style={styles.unit}
               onSelect={this.props.selectUnit}/>
           </View>
-                )
+    )
   }
 }
 const styles = StyleSheet.create({
@@ -29,13 +22,5 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     margin: 10
-  },
-  unit: {
-    fontSize: 18,
-    color: 'green',
-    margin: 2,
-    padding: 10,
-    borderWidth: 2,
-    backgroundColor: 'lightsteelblue'
   }
 })

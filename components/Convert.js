@@ -36,10 +36,7 @@ export default class Convert extends Component {
 
   render () {
 
-   const option = this.props.navigation.state.params ?
-    this.props.navigation.state.params.option :
-    measurements[0]
-
+   const option = this.props.navigation.state.params.option
     return (
       <Container style={styles.container}>
         <Content >
@@ -52,9 +49,11 @@ export default class Convert extends Component {
 
           <Text style={styles.header}>{`Convert ${option.title}`}</Text>
 
-          <From option={option}
-           selectUnit={this.selectFromUnit}/>
-          <To option={option}
+          <From
+            option={option}
+            selectUnit={this.selectFromUnit}/>
+          <To
+            option={option}
             selectUnit={this.selectToUnit}/>
           <InputResult
             fromUnit={this.state.fromUnit}
@@ -96,15 +95,5 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around'
-  },
-  unitFrom: {
-    fontSize: 18,
-    color: 'blue',
-    margin: 10
-  },
-  unitTo: {
-    fontSize: 18,
-    color: 'green',
-    margin: 10
   }
 })

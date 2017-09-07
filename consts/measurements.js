@@ -7,24 +7,19 @@ import speedIcon from '../images/speed.png'
 const measurements = [
   {title: 'Temperature',
    icon: tempIcon,
-   unitsMetric: ['Celsius'],
-   unitsImperial: ['Fahrenheit']},
+   units: ['C', 'F']},
   {title: 'Length',
    icon: lengthIcon,
-   unitsMetric: ['Mm', 'Cm', 'M', 'Km'],
-   unitsImperial: ['In', 'Yd', 'Ft', 'Mile']},
+   units: ['mm', 'cm', 'm', 'km', 'in', 'yd', 'ft', 'ml']},
   {title: 'Weight',
    icon: weightIcon,
-   unitsMetric: ['Mg', 'Gram', 'Kg', 'Ton'],
-   unitsImperial: ['Oz', 'Lb', 'Stone']},
+   units: ['mg', 'g', 'kg', 'ton','oz', 'lb', 'st']},
   {title: 'Area',
    icon: areaIcon,
-   unitsMetric: ['SqCm', 'SqM', 'Ha', 'SqKm'],
-   unitsImperial: ['SqIn', 'SqFt', 'SqYd', 'Acre', 'SqMile']},
+   units: ['cm2', 'm2', 'ha', 'km2', 'in2', 'ft2', 'yd2', 'acre', 'ml2']},
   {title: 'Speed',
    icon: speedIcon,
-   unitsMetric: ['Kilometers/hour'],
-   unitsImperial: ['Miles/hour']}
+   units: ['km/h', 'ml/h']}
 ]
 
 export default measurements
