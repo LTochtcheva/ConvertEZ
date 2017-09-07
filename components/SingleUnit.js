@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Text, TouchableOpacity } from 'react-native'
+import { Button } from 'native-base'
 
 export default class SingleUnit extends Component {
 
@@ -14,5 +15,6 @@ export default class SingleUnit extends Component {
             </Text>
           </TouchableOpacity>
     )
+
   }
 }

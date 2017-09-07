@@ -30,8 +30,8 @@ export default class Units extends Component {
 
     return (
 
-      <ScrollView  horizontal={true}>
-        <View style={styles.row}>
+      <View  horizontal={true} >
+        <View style={styles.row} flexWrap={'wrap'}>
           {this.props.units.map((unit, i) => {
             unitStyle = this.getStyle(unit)
             return (
@@ -46,49 +46,66 @@ export default class Units extends Component {
             )}
           )}
         </View>
-      </ScrollView>)
+      </View>)
   }
 }
 
 const styles = StyleSheet.create({
   row: {
     alignItems: 'center',
+    //justifyContent: 'center',
     flexDirection: 'row',
     marginTop: 5,
-    margin: 5
+    margin: 5,
+    flex:1
   },
   fromUnit: {
     fontSize: 16,
     color: 'blue',
-    margin: 0,
-    padding: 5,
+    margin: 3,
+    padding: 3,
     borderWidth: 2,
-    backgroundColor: 'lightsteelblue'
+    borderRadius: 5,
+    borderColor: 'blue',
+    width: 50,
+    textAlign: 'center'
   },
   selectedFromUnit: {
     fontSize: 18,
     color: 'black',
     fontWeight: 'bold',
     margin: 3,
-    padding: 10,
+    padding: 5,
     borderWidth: 2,
-    backgroundColor: 'blue'
+    backgroundColor: 'lightsteelblue',
+    borderRadius: 5,
+    borderColor: 'blue',
+    width: 55,
+    textAlign: 'center',
+    overflow: 'hidden'
   },
   toUnit: {
     fontSize: 16,
     color: 'green',
-    margin: 0,
-    padding: 5,
+    margin: 3,
+    padding: 3,
     borderWidth: 2,
-    backgroundColor: 'lightsteelblue'
+    borderRadius: 5,
+    borderColor: 'green',
+    width: 50,
+    textAlign: 'center'
   },
   selectedToUnit: {
     fontSize: 18,
     color: 'black',
     fontWeight: 'bold',
     margin: 3,
-    padding: 10,
+    padding: 5,
     borderWidth: 2,
-    backgroundColor: 'green'
+    borderRadius: 5,
+    backgroundColor: 'green',
+    width: 55,
+    textAlign: 'center',
+    overflow: 'hidden'
   }
 })
