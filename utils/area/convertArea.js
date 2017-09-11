@@ -33,6 +33,7 @@ export default (text, from, to) => {
       return convertSqMile(text,to)
     default:
       alert('Select From Unit')
+      return ''
   }
 }
 

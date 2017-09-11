@@ -19,5 +19,6 @@ export default (text,to) => {
       return text
     default:
       alert('Select To Unit')
+      return ''
   }
 }

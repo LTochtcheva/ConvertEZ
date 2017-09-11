@@ -20,5 +20,6 @@ export default (text,to) => {
       return (Number(text) * 6.2137e-6).toFixed(5).toString()
     default:
       alert('Select To Unit')
+      return ''
   }
 }

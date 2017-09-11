@@ -9,5 +9,6 @@ export default (text, from, to) => {
       return convertF(text,to)
     default:
       alert('Select From Unit')
+      return ''
   }
 }

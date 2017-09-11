@@ -30,5 +30,6 @@ export default (text, from, to) => {
       return convertMl(text,to)
     default:
       alert('Select From Unit')
+      return ''
   }
 }

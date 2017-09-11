@@ -18,5 +18,6 @@ export default (text, option, from, to) => {
       return convertSpeed(text,from,to)
     default:
       alert('Something went wrong...')
+      return ''
   }
 }

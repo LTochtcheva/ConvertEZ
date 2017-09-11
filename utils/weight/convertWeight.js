@@ -27,5 +27,6 @@ export default (text, from, to) => {
       return convertStone(text,to)
     default:
       alert('Select From Unit')
+      return ''
   }
 }

@@ -17,5 +17,6 @@ export default (text,to) => {
       return (Number(text) * 0.004464286).toString()
     default:
       alert('Select To Unit')
+      return ''
   }
 }
