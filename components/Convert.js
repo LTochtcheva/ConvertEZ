@@ -2,13 +2,12 @@ import React, { Component } from 'react'
 import { StyleSheet,
          Text,
          TouchableOpacity,
-         View } from 'react-native'
+       } from 'react-native'
 import { Container, Content, Icon } from 'native-base'
 
 import InputResult from './InputResult.js'
 import From from './From.js'
 import To from './To.js'
-import measurements from '../consts/measurements.js'
 
 export default class Convert extends Component {
   constructor() {
@@ -69,7 +68,6 @@ const styles = StyleSheet.create({
   header: {
     color: 'maroon',
     fontSize: 28,
-  //  fontWeight: 'bold',
     margin: 5,
     alignSelf: 'center',
     fontFamily: 'Heiti SC'

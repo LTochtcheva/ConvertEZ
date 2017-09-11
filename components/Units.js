@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     marginTop: 5,
-    margin: 15,
+    marginLeft: 20,
     flex:1
   },
   fromUnit: {
@@ -66,6 +66,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 5,
     borderColor: 'blue',
+    backgroundColor: 'white',
+    overflow: 'hidden',
     width: 50,
     textAlign: 'center',
     fontFamily: 'Heiti SC'
@@ -96,6 +98,7 @@ const styles = StyleSheet.create({
     width: 50,
     textAlign: 'center',
     backgroundColor: 'white',
+    overflow: 'hidden',
     fontFamily: 'Heiti SC'
   },
   selectedToUnit: {

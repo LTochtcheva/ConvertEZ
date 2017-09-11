@@ -20,8 +20,7 @@ const styles = StyleSheet.create({
   header: {
     color: 'green',
     fontSize: 22,
-   // fontWeight: 'bold',
-    margin: 20,
+    margin: 25,
     fontFamily: 'Heiti SC'
   }
 })

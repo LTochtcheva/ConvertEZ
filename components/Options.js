@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
   header: {
     color: 'maroon',
     fontSize: 28,
-   // fontWeight: 'bold',
     paddingTop: 20,
     margin: 10,
     alignSelf: 'center',

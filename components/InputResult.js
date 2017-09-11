@@ -34,6 +34,7 @@ export default class InputResult extends Component {
             value={this.state.text}
             onChangeText={(text) => this.setState({text})}
             autoCorrect={false}
+            clearButtonMode='always'
             style={styles.input}
             onSubmitEditing={() => this.onConvert(this.state.text)}/>
 
