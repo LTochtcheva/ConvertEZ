@@ -4,7 +4,7 @@ import { StyleSheet,
          TextInput,
          TouchableOpacity,
          Text} from 'react-native'
-import { Icon } from 'native-base'
+import { Icon, Button } from 'native-base'
 import convert from '../utils/convertMain'
 
 export default class InputResult extends Component {
@@ -37,11 +37,12 @@ export default class InputResult extends Component {
             style={styles.input}
             onSubmitEditing={() => this.onConvert(this.state.text)}/>
 
-          <TouchableOpacity
+           <Button rounded success
             style={styles.button}
             onPress={() => this.onConvert(this.state.text)}>
+            <Text style={styles.buttonText}>Convert</Text>
             <Icon name='arrow-forward' style={styles.icon} />
-          </TouchableOpacity>
+          </Button>
         </View>
 
         <Text style={styles.resultText}>
@@ -70,22 +71,29 @@ const styles = StyleSheet.create({
     margin: 5,
     padding: 5,
     fontSize: 26,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    fontFamily: 'Heiti SC'
   },
   resultText: {
     color: 'green',
     margin: 5,
     padding: 5,
     alignSelf: 'center',
-    fontSize: 26
+    fontSize: 26,
+    fontFamily: 'Heiti SC'
   },
   icon: {
-    color: 'blue',
-    alignSelf: 'center',
-    margin: 10
+    color: 'white'
   },
   button: {
-    alignSelf: 'center',
-    margin: 10
+    margin: 15,
+    padding: 10,
+    backgroundColor: 'darkseagreen',
+    borderColor: 'darkgreen',
+    borderWidth: 2
+  },
+  buttonText: {
+    fontFamily: 'Heiti SC',
+    color: 'white'
   }
 })

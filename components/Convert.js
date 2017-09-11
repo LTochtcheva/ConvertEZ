@@ -68,10 +68,11 @@ export default class Convert extends Component {
 const styles = StyleSheet.create({
   header: {
     color: 'maroon',
-    fontSize: 26,
-    fontWeight: 'bold',
+    fontSize: 28,
+  //  fontWeight: 'bold',
     margin: 5,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    fontFamily: 'Heiti SC'
   },
   container: {
     backgroundColor: 'ivory'
@@ -80,7 +81,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontSize: 16,
     color: 'blue',
-    padding: 4
+    padding: 4,
+    fontFamily: 'Heiti SC'
   },
   backRow: {
     flexDirection: 'row',

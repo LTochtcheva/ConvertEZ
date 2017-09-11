@@ -53,10 +53,9 @@ export default class Units extends Component {
 const styles = StyleSheet.create({
   row: {
     alignItems: 'center',
-    //justifyContent: 'center',
     flexDirection: 'row',
     marginTop: 5,
-    margin: 5,
+    margin: 15,
     flex:1
   },
   fromUnit: {
@@ -68,11 +67,12 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: 'blue',
     width: 50,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'Heiti SC'
   },
   selectedFromUnit: {
     fontSize: 18,
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold',
     margin: 3,
     padding: 5,
@@ -80,32 +80,37 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightsteelblue',
     borderRadius: 5,
     borderColor: 'blue',
-    width: 55,
+    width: 60,
     textAlign: 'center',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontFamily: 'Heiti SC'
   },
   toUnit: {
     fontSize: 16,
-    color: 'green',
+    color: 'darkgreen',
     margin: 3,
     padding: 3,
     borderWidth: 2,
     borderRadius: 5,
-    borderColor: 'green',
+    borderColor: 'darkgreen',
     width: 50,
-    textAlign: 'center'
+    textAlign: 'center',
+    backgroundColor: 'white',
+    fontFamily: 'Heiti SC'
   },
   selectedToUnit: {
     fontSize: 18,
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold',
     margin: 3,
     padding: 5,
     borderWidth: 2,
     borderRadius: 5,
-    backgroundColor: 'green',
-    width: 55,
+    borderColor: 'darkgreen',
+    backgroundColor: 'darkseagreen',
+    width: 60,
     textAlign: 'center',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontFamily: 'Heiti SC'
   }
 })

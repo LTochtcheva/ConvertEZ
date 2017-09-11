@@ -1,19 +1,19 @@
 export default (text,to) => {
 
   switch(to) {
-    case 'Mg':
+    case 'mg':
       return (Number(text) * 6350293).toString()
-    case 'Gram':
+    case 'g':
       return (Number(text) * 6350.293).toString()
-    case 'Kg':
+    case 'kg':
       return (Number(text) * 6.350293).toString()
-    case 'Ton':
+    case 'ton':
       return (Number(text) * 0.006350293).toString()
-    case 'Oz':
+    case 'oz':
       return (Number(text) * 224).toString()
-    case 'Lb':
+    case 'lb':
       return (Number(text) * 14).toString()
-    case 'Stone':
+    case 'st':
       return text
     default:
       alert('Select To Unit')

@@ -10,26 +10,26 @@ import convertAcre from './convertAcre'
 import convertSqMile from './convertSqMile'
 
 export default (text, from, to) => {
-  console.log(`In Area converting ${text} ${from} into ${to}`)
+
   switch(from) {
-    case 'SqCm':
+    case 'cm2':
       return convertSqCm(text,to)
-    case 'SqM':
+    case 'm2':
       return convertSqM(text,to)
-    case 'Ha':
+    case 'ha':
       return convertHa(text,to)
-    case 'SqKm':
+    case 'km2':
       return convertSqKm(text,to)
 
-    case 'SqIn':
+    case 'in2':
       return convertSqIn(text,to)
-    case 'SqFt':
+    case 'ft2':
       return convertSqFt(text,to)
-    case 'SqYd':
+    case 'yd2':
       return convertSqYd(text,to)
-    case 'Acre':
+    case 'acre':
       return convertAcre(text,to)
-    case 'SqMile':
+    case 'ml2':
       return convertSqMile(text,to)
     default:
       alert('Select From Unit')

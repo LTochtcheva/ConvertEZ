@@ -13,7 +13,7 @@ const measurements = [
    units: ['mm', 'cm', 'm', 'km', 'in', 'yd', 'ft', 'ml']},
   {title: 'Weight',
    icon: weightIcon,
-   units: ['mg', 'g', 'kg', 'ton','oz', 'lb', 'st']},
+   units: ['mg', 'g', 'kg', 'ton', 'oz', 'lb', 'st']},
   {title: 'Area',
    icon: areaIcon,
    units: ['cm2', 'm2', 'ha', 'km2', 'in2', 'ft2', 'yd2', 'acre', 'ml2']},

@@ -1,9 +1,9 @@
 export default (text,to) => {
-  if (to === 'Kilometers/hour') {
-    return (Number(text) * 1.609344 ).toString()
+  if (to === 'km/h') {
+    return (Number(text) * 1.6 ).toFixed(2).toString()
   }
-  else if (to === 'Miles/hour') return text
-    else alert('Select To Unit')
+  else if (to === 'ml/h') return text
+       else alert('Select To Unit')
 
 }
 

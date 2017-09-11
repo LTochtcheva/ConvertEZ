@@ -3,9 +3,9 @@ import convertMlH from './convertMlH'
 
 export default (text, from, to) => {
   switch(from) {
-    case 'Kilometers/hour':
+    case 'km/h':
       return convertKmH(text,to)
-    case 'Miles/hour':
+    case 'ml/h':
       return convertMlH(text,to)
     default:
       alert('Select From Unit')

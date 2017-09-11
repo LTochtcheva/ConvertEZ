@@ -10,20 +10,20 @@ import convertStone from './convertStone'
 export default (text, from, to) => {
   console.log(`In Weight converting ${text} ${from} into ${to}`)
   switch(from) {
-    case 'Mg':
+    case 'mg':
       return convertMg(text,to)
-    case 'Gram':
+    case 'g':
       return convertGram(text,to)
-    case 'Kg':
+    case 'kg':
       return convertKg(text,to)
-    case 'Ton':
+    case 'ton':
       return convertTon(text,to)
 
-    case 'Oz':
+    case 'oz':
       return convertOz(text,to)
-    case 'Lb':
+    case 'lb':
       return convertLb(text,to)
-    case 'Stone':
+    case 'st':
       return convertStone(text,to)
     default:
       alert('Select From Unit')

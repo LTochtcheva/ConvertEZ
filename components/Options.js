@@ -45,11 +45,12 @@ export default class Options extends Component {
 const styles = StyleSheet.create({
   header: {
     color: 'maroon',
-    fontSize: 26,
-    fontWeight: 'bold',
+    fontSize: 28,
+   // fontWeight: 'bold',
     paddingTop: 20,
     margin: 10,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    fontFamily: 'Heiti SC'
   },
   list: {
     flex: 1,

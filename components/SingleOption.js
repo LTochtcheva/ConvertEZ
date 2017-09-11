@@ -11,7 +11,7 @@ import {  StyleSheet,
       (
       <TouchableHighlight style={styles.button}
         onPress={() => {onSelect(option)}}
-        underlayColor='darksalmon'>
+        underlayColor='darkorange'>
         <View style={styles.row}>
           <Image style={styles.icon} source={option.icon} />
           <Text style={styles.text}>
@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 22,
     margin: 5,
-    padding: 5
+    padding: 5,
+    fontFamily: 'Heiti SC'
   },
   button: {
     backgroundColor: 'lightsteelblue',
@@ -38,7 +39,12 @@ const styles = StyleSheet.create({
     padding: 10,
     borderWidth: 2,
     borderRadius: 10,
-    alignSelf: 'stretch'
+    alignSelf: 'stretch',
+    borderColor: 'maroon',
+    shadowOpacity: 1,
+    shadowRadius: 3,
+    shadowColor: 'maroon',
+    shadowOffset: { height: 2, width: 0 }
   },
   icon: {
     margin: 10,

@@ -9,24 +9,24 @@ import convertFt from './convertFt'
 import convertMl from './convertMl'
 
 export default (text, from, to) => {
-  console.log(`In Length converting ${text} ${from} into ${to}`)
+
   switch(from) {
-    case 'Mm':
+    case 'mm':
       return convertMm(text,to)
-    case 'Cm':
+    case 'cm':
       return convertCm(text,to)
-    case 'M':
+    case 'm':
       return convertM(text,to)
-    case 'Km':
+    case 'km':
       return convertKm(text,to)
 
-    case 'In':
+    case 'in':
       return convertIn(text,to)
-    case 'Yd':
+    case 'yd':
       return convertYd(text,to)
-    case 'Ft':
+    case 'ft':
       return convertFt(text,to)
-    case 'Mile':
+    case 'ml':
       return convertMl(text,to)
     default:
       alert('Select From Unit')

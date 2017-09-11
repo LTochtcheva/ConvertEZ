@@ -1,23 +1,23 @@
 export default (text,to) => {
 
   switch(to) {
-    case 'Mm':
+    case 'mm':
       return (Number(text) * 10).toString()
-    case 'Cm':
+    case 'cm':
       return text
-    case 'M':
+    case 'm':
       return (Number(text)/100).toString()
-    case 'Km':
+    case 'km':
       return (Number(text)/100000).toString()
 
-    case 'In':
-      return (Number(text) * 0.3937007874).toString()
-    case 'Yd':
-      return (Number(text) * 0.0109361 ).toString()
-    case 'Ft':
-      return (Number(text) * 0.0328084).toString()
-    case 'Mile':
-      return (Number(text) * 6.2137e-6).toString()
+    case 'in':
+      return (Number(text) * 0.3937007874).toFixed(2).toString()
+    case 'yd':
+      return (Number(text) * 0.0109361 ).toFixed(2).toString()
+    case 'ft':
+      return (Number(text) * 0.0328084).toFixed(2).toString()
+    case 'ml':
+      return (Number(text) * 6.2137e-6).toFixed(5).toString()
     default:
       alert('Select To Unit')
   }

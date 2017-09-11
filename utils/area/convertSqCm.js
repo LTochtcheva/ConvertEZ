@@ -1,23 +1,23 @@
 export default (text,to) => {
 
   switch(to) {
-    case 'SqCm':
+    case 'cm2':
       return text
-    case 'SqM':
+    case 'm2':
       return (Number(text) * 0.0001).toString()
-    case 'Ha':
+    case 'ha':
       return (Number(text) * 0.000000010).toString()
-    case 'SqKm':
+    case 'km2':
       return (Number(text) * 0.00000000010).toString()
-    case 'SqIn':
+    case 'in2':
       return (Number(text) * 0.15500031000062).toString()
-    case 'SqFt':
+    case 'ft2':
       return (Number(text) * 0.001076391041671).toString()
-    case 'SqYd':
+    case 'yd2':
       return (Number(text) * 0.00011959900463011).toString()
-    case 'Acre':
+    case 'acre':
       return (Number(text) * 0.000000024710538146717).toString()
-    case 'SqMile':
+    case 'ml2':
       return (Number(text) * 0.000000000038610215854245).toString()
     default:
       alert('Select To Unit')

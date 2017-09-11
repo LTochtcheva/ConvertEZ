@@ -3,9 +3,9 @@ import convertF from './convertF'
 
 export default (text, from, to) => {
   switch(from) {
-    case 'Celsius':
+    case 'C':
       return convertC(text,to)
-    case 'Fahrenheit':
+    case 'F':
       return convertF(text,to)
     default:
       alert('Select From Unit')

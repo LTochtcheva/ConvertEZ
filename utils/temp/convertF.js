@@ -1,9 +1,8 @@
 export default (text,to) => {
-  if (to === 'Celsius') {
-    console.log('here')
-    return ((Number(text) - 32) * 5/9 ).toString()
+  if (to === 'C') {
+    return ((Number(text) - 32) * 5/9 ).toFixed(2).toString()
   }
-  else if (to === 'Fahrenheit') return text
+  else if (to === 'F') return text
     else alert('Select To Unit')
 
 }
