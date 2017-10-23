@@ -104,55 +104,45 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = ConvertEZ;
 		};
-<<<<<<< HEAD
-		0795E4D51F5E2B89004702C1 /* PBXContainerItemProxy */ = {
-=======
+
 		0795E3621F5DF896004702C1 /* PBXContainerItemProxy */ = {
->>>>>>> origin
+
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
 			remoteInfo = "third-party";
 		};
-<<<<<<< HEAD
-		0795E4D71F5E2B89004702C1 /* PBXContainerItemProxy */ = {
-=======
+
 		0795E3641F5DF896004702C1 /* PBXContainerItemProxy */ = {
->>>>>>> origin
+
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3D383D3C1EBD27B6005632C8;
 			remoteInfo = "third-party-tvOS";
 		};
-<<<<<<< HEAD
-		0795E4D91F5E2B89004702C1 /* PBXContainerItemProxy */ = {
-=======
+
 		0795E3661F5DF896004702C1 /* PBXContainerItemProxy */ = {
->>>>>>> origin
+
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
 			remoteInfo = "double-conversion";
 		};
-<<<<<<< HEAD
-		0795E4DB1F5E2B89004702C1 /* PBXContainerItemProxy */ = {
-=======
+
 		0795E3681F5DF896004702C1 /* PBXContainerItemProxy */ = {
->>>>>>> origin
+
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
 			remoteInfo = "double-conversion-tvOS";
 		};
-<<<<<<< HEAD
-		0795E4DE1F5E2B89004702C1 /* PBXContainerItemProxy */ = {
-=======
+
 		0795E36B1F5DF896004702C1 /* PBXContainerItemProxy */ = {
->>>>>>> origin
+
 			isa = PBXContainerItemProxy;
 			containerPortal = 75177978FD0C47C0B20D1B2D /* RNVectorIcons.xcodeproj */;
 			proxyType = 2;
@@ -471,17 +461,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-		0795E4B61F5E2B89004702C1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0795E4DF1F5E2B89004702C1 /* libRNVectorIcons.a */,
-=======
+
 		0795E3431F5DF896004702C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				0795E36C1F5DF896004702C1 /* libRNVectorIcons.a */,
->>>>>>> origin
+
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -529,17 +514,12 @@
 				3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */,
 				3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */,
 				3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */,
-<<<<<<< HEAD
-				0795E4D61F5E2B89004702C1 /* libthird-party.a */,
-				0795E4D81F5E2B89004702C1 /* libthird-party.a */,
-				0795E4DA1F5E2B89004702C1 /* libdouble-conversion.a */,
-				0795E4DC1F5E2B89004702C1 /* libdouble-conversion.a */,
-=======
+
 				0795E3631F5DF896004702C1 /* libthird-party.a */,
 				0795E3651F5DF896004702C1 /* libthird-party.a */,
 				0795E3671F5DF896004702C1 /* libdouble-conversion.a */,
 				0795E3691F5DF896004702C1 /* libdouble-conversion.a */,
->>>>>>> origin
+
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -803,11 +783,9 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-<<<<<<< HEAD
-					ProductGroup = 0795E4B61F5E2B89004702C1 /* Products */;
-=======
+
 					ProductGroup = 0795E3431F5DF896004702C1 /* Products */;
->>>>>>> origin
+
 					ProjectRef = 75177978FD0C47C0B20D1B2D /* RNVectorIcons.xcodeproj */;
 				},
 			);
@@ -857,41 +835,7 @@
 			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-<<<<<<< HEAD
-		0795E4D61F5E2B89004702C1 /* libthird-party.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libthird-party.a";
-			remoteRef = 0795E4D51F5E2B89004702C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0795E4D81F5E2B89004702C1 /* libthird-party.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libthird-party.a";
-			remoteRef = 0795E4D71F5E2B89004702C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0795E4DA1F5E2B89004702C1 /* libdouble-conversion.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libdouble-conversion.a";
-			remoteRef = 0795E4D91F5E2B89004702C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0795E4DC1F5E2B89004702C1 /* libdouble-conversion.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libdouble-conversion.a";
-			remoteRef = 0795E4DB1F5E2B89004702C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0795E4DF1F5E2B89004702C1 /* libRNVectorIcons.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNVectorIcons.a;
-			remoteRef = 0795E4DE1F5E2B89004702C1 /* PBXContainerItemProxy */;
-=======
+
 		0795E3631F5DF896004702C1 /* libthird-party.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -925,7 +869,7 @@
 			fileType = archive.ar;
 			path = libRNVectorIcons.a;
 			remoteRef = 0795E36B1F5DF896004702C1 /* PBXContainerItemProxy */;
->>>>>>> origin
+
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
@@ -1254,10 +1198,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-<<<<<<< HEAD
-=======
+
 				DEVELOPMENT_TEAM = 6C3DM8R2LQ;
->>>>>>> origin
+
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1284,10 +1227,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-<<<<<<< HEAD
-=======
+
 				DEVELOPMENT_TEAM = 6C3DM8R2LQ;
->>>>>>> origin
+
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1310,10 +1252,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-<<<<<<< HEAD
-=======
+
 				DEVELOPMENT_TEAM = 6C3DM8R2LQ;
->>>>>>> origin
+
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",

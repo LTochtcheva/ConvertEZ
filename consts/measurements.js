@@ -3,6 +3,7 @@ import lengthIcon from '../images/length.png'
 import weightIcon from '../images/weight.png'
 import areaIcon from '../images/area.png'
 import speedIcon from '../images/speed.png'
+import volumeIcon from '../images/volume.png'
 
 const measurements = [
   {title: 'Temperature',
@@ -19,7 +20,10 @@ const measurements = [
    units: ['cm2', 'm2', 'ha', 'km2', 'in2', 'ft2', 'yd2', 'acre', 'ml2']},
   {title: 'Speed',
    icon: speedIcon,
-   units: ['km/h', 'ml/h']}
+   units: ['km/h', 'ml/h']},
+   {title: 'Volume',
+   icon: volumeIcon,
+   units: ['mL', 'l', 'mm3', 'cm3', 'm3', 'gal', 'qt', 'pt', 'cup']}
 ]
 
 export default measurements
