@@ -7,6 +7,7 @@ import convertGal from './convertGal'
 import convertQt from './convertQt'
 import convertPt from './convertPt'
 import convertCup from './convertCup'
+import convertFlOz from './convertFlOz'
 
 export default (text, from, to) => {
   switch(from) {
@@ -28,6 +29,8 @@ export default (text, from, to) => {
       return convertPt(text,to)
     case 'cup':
       return convertCup(text,to)
+    case 'fl oz':
+      return convertFlOz(text,to)
     default:
       alert('Select From Unit')
       return ''

@@ -3,6 +3,7 @@ import convertLength from './length/convertLength'
 import convertWeight from './weight/convertWeight'
 import convertArea from './area/convertArea'
 import convertSpeed from './speed/convertSpeed'
+import convertVolume from './volume/convertVolume'
 
 export default (text, option, from, to) => {
   switch (option) {
@@ -16,6 +17,8 @@ export default (text, option, from, to) => {
       return convertArea(text,from,to)
     case 'Speed':
       return convertSpeed(text,from,to)
+    case 'Volume':
+      return convertVolume(text,from,to)
     default:
       alert('Something went wrong...')
       return ''

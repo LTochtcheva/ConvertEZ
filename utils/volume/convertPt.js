@@ -6,7 +6,7 @@ export default (text,to) => {
     case 'l':
       return (Number(text) * 0.473).toString()
     case 'mm3':
-      return (Number(text) * 473 176.47).toString()
+      return (Number(text) * 473176.47).toString()
     case 'cm3':
       return (Number(text) * 473.18).toString()
     case 'm3':
