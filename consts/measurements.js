@@ -23,7 +23,7 @@ const measurements = [
    units: ['km/h', 'ml/h']},
    {title: 'Volume',
    icon: volumeIcon,
-   units: ['mL', 'l', 'mm3', 'cm3', 'm3', 'gal', 'qt', 'pt', 'cup']}
+   units: ['mL', 'l', 'mm3', 'cm3', 'm3', 'gal', 'qt', 'pt', 'cup', 'fl oz']}
 ]
 
 export default measurements
